@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-Conexion-mysql", "01-Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-Query", "02-Query\02-Query.csproj", "{D9E038B4-940B-4CC1-B919-14D3FF4CB2AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-4Operaciones", "03-4Operaciones\03-4Operaciones.csproj", "{6619E9CF-0DAB-42F6-A958-A4487D0F3E9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D9E038B4-940B-4CC1-B919-14D3FF4CB2AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9E038B4-940B-4CC1-B919-14D3FF4CB2AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9E038B4-940B-4CC1-B919-14D3FF4CB2AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6619E9CF-0DAB-42F6-A958-A4487D0F3E9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6619E9CF-0DAB-42F6-A958-A4487D0F3E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6619E9CF-0DAB-42F6-A958-A4487D0F3E9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6619E9CF-0DAB-42F6-A958-A4487D0F3E9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
