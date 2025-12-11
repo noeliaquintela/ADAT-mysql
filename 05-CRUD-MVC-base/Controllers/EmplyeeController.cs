@@ -8,7 +8,7 @@ using _05_CRUD_MVC_base.Models;
 
 namespace _05_CRUD_MVC_base.Controllers
 {
-    public class EmplyeeController
+    public class EmployeeController
     {
         private readonly string connectionString = 
             "server=localhost;port=3307;user=dam2;password=abc123.;database=w3schools;";
@@ -39,5 +39,19 @@ namespace _05_CRUD_MVC_base.Controllers
                 return empleados;
             }
         }
+
+        public bool Delete(int id) {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "DELETE FROM employees WHERE EmployeeID=@ID";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn)) {
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    return cmd.ExecuteNonQuery() > 0;
+                }  
+            }
+          }
     }
+
+
 }

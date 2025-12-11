@@ -1,0 +1,15 @@
+CRUD BASE EN UN DataGridView
+1 Insertar controles y poner nombre y text
+2 Crear carpetas Models, Views, Controllers
+3 Clase que mapee la tabla en una clase (get,set)(Model)
+4 En el controller incluir el modelo (using)
+5 Instalar (nuget+using) MySql.Data.MySqlClient
+6 Crear la cadena de conexión
+7 Crear el método GetAll que devuelve una lista con todos los empleados
+8 Incluir en el form los using al modelo y controlador
+9 Crear un objeto controlador dentro del formulario 
+10 En el view (form) crear método CargarDatos y asociar el handler del click en cargar con este método
+11 Creamos en el controlador el método Delete (int)
+12 En la vista crear el manejador del clic en el dgv par que cargue los datos en los campos
+13 En la vista asociar el botón borrar al método del manejador
+

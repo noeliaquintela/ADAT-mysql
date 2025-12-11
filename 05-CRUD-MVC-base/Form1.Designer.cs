@@ -116,6 +116,7 @@
             btnDelete.TabIndex = 7;
             btnDelete.Text = "Borrar";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // txtID
             // 
@@ -152,6 +153,7 @@
             dgvEmployees.Name = "dgvEmployees";
             dgvEmployees.Size = new Size(447, 142);
             dgvEmployees.TabIndex = 12;
+            dgvEmployees.CellClick += dgvEmployees_CellClick;
             // 
             // Form1
             // 
