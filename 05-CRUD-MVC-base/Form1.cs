@@ -16,6 +16,8 @@ namespace _05_CRUD_MVC_base
         {
             dgvEmployees.DataSource = null;
             dgvEmployees.DataSource = controladorEmp.GetAll();
+            if (dgvEmployees.Rows.Count > 0) 
+                dgv2form(0);            
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
@@ -23,17 +25,23 @@ namespace _05_CRUD_MVC_base
             CargarDatos();
         }
 
-        private void dgvEmployees_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgv2form (int indice)
         {
-            if (e.RowIndex >= 0 && dgvEmployees.Rows.Count > e.RowIndex)
+            if (indice >= 0 && dgvEmployees.Rows.Count > indice)
             {
-                var row = dgvEmployees.Rows[e.RowIndex];
+                var row = dgvEmployees.Rows[indice];
                 //insertar los datos del dgvb en los campos (textbox)
                 txtID.Text = row.Cells["EmployeeID"].Value.ToString();
                 txtName.Text = row.Cells["FirstName"].Value.ToString();
                 txtLastName.Text = row.Cells["LastName"].Value.ToString();
                 dtpBirthDate.Value = Convert.ToDateTime(row.Cells["BirthDate"].Value);
             }
+
+
+        }
+        private void dgvEmployees_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgv2form(e.RowIndex);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -88,7 +96,7 @@ namespace _05_CRUD_MVC_base
                 LastName = txtLastName.Text,
                 BirthDate = dtpBirthDate.Value
             };
-            if (controladorEmp.Insert(emp))
+            if (controladorEmp.Update(emp))
                 MessageBox.Show("Modificación correcta");
             else
                 MessageBox.Show("No se ho podido modificar");

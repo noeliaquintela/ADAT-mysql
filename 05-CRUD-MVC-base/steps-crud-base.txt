@@ -16,3 +16,9 @@ CRUD BASE EN UN DataGridView
 15 En la vista asigno el botón Insertar al manejador que invoca al controlador
 16 Cargamos datos al final de insertar (en general al final de cada operación e incluso al cargar el formulario)
 17 Lo mismo con insertar en el controlador y la vista
+18 Pequeños retoques diseño: textbox de id enable false;
+	dgv: anchor top left right, autosizecomumnsmode = fill, multiselect = false
+		podríamos retocar el evento "selectionchange"
+19 Cargar al empezar en los campos el primer registro (hacer metodo dgv2form(indice)
+	Resaltar la tupla completa (selectionmode->Fullrowselect)al seleccionar hacer click en el dgv
+	Queda por corregir error al hacer click en una celda y desplazar a otra tupla sin soltar ratón??

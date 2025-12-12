@@ -122,6 +122,7 @@
             // 
             // txtID
             // 
+            txtID.Enabled = false;
             txtID.Location = new Point(89, 170);
             txtID.Name = "txtID";
             txtID.Size = new Size(100, 23);
@@ -150,9 +151,13 @@
             // 
             // dgvEmployees
             // 
+            dgvEmployees.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dgvEmployees.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvEmployees.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvEmployees.Location = new Point(12, 12);
+            dgvEmployees.MultiSelect = false;
             dgvEmployees.Name = "dgvEmployees";
+            dgvEmployees.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvEmployees.Size = new Size(447, 142);
             dgvEmployees.TabIndex = 12;
             dgvEmployees.CellClick += dgvEmployees_CellClick;
