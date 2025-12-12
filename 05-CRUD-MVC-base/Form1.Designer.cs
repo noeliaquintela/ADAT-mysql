@@ -98,6 +98,7 @@
             btnAdd.TabIndex = 5;
             btnAdd.Text = "Insertar";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnModify
             // 
@@ -107,6 +108,7 @@
             btnModify.TabIndex = 6;
             btnModify.Text = "Modificar";
             btnModify.UseVisualStyleBackColor = true;
+            btnModify.Click += btnModify_Click;
             // 
             // btnDelete
             // 
@@ -175,6 +177,7 @@
             Controls.Add(lblID);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dgvEmployees).EndInit();
             ResumeLayout(false);
             PerformLayout();

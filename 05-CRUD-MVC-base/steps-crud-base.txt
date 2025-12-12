@@ -12,4 +12,7 @@ CRUD BASE EN UN DataGridView
 11 Creamos en el controlador el método Delete (int)
 12 En la vista crear el manejador del clic en el dgv par que cargue los datos en los campos
 13 En la vista asociar el botón borrar al método del manejador
-
+14 Creo el método insert en el controlador pasándole un Employee
+15 En la vista asigno el botón Insertar al manejador que invoca al controlador
+16 Cargamos datos al final de insertar (en general al final de cada operación e incluso al cargar el formulario)
+17 Lo mismo con insertar en el controlador y la vista

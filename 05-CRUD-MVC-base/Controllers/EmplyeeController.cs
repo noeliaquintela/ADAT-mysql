@@ -51,6 +51,46 @@ namespace _05_CRUD_MVC_base.Controllers
                 }  
             }
           }
+
+        public bool Insert(Employee emp)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = @"INSERT INTO employees (FirstName, LastName, BirthDate)
+                                VALUES (@FirstName, @LastName, @BirthDate)";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@FirstName", emp.FirstName);
+                    cmd.Parameters.AddWithValue("@LastName", emp.LastName);
+                    cmd.Parameters.AddWithValue("@BirthDate", emp.BirthDate);
+
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
+        public bool Update(Employee emp)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = @"UPDATE employees
+                                 SET FirstName = @FirstName,
+                                     LastName = @LastName,
+                                     BirthDate = @BirthDate
+                                 WHERE EmployeeID = @EmployeeID";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@FirstName", emp.FirstName);
+                    cmd.Parameters.AddWithValue("@LastName", emp.LastName);
+                    cmd.Parameters.AddWithValue("@BirthDate", emp.BirthDate);
+                    cmd.Parameters.AddWithValue("@EmployeeID", emp.EmployeeID);
+
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
     }
 
 

@@ -30,13 +30,16 @@ namespace _05_CRUD_MVC_base
                 var row = dgvEmployees.Rows[e.RowIndex];
                 //insertar los datos del dgvb en los campos (textbox)
                 txtID.Text = row.Cells["EmployeeID"].Value.ToString();
-                //TODO: completar
+                txtName.Text = row.Cells["FirstName"].Value.ToString();
+                txtLastName.Text = row.Cells["LastName"].Value.ToString();
+                dtpBirthDate.Value = Convert.ToDateTime(row.Cells["BirthDate"].Value);
             }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtID.Text)) {
+            if (string.IsNullOrWhiteSpace(txtID.Text))
+            {
                 MessageBox.Show("ID no válido");
                 return;
             }
@@ -46,7 +49,51 @@ namespace _05_CRUD_MVC_base
                 MessageBox.Show("Borrado correctamente");
             else
                 MessageBox.Show("No se ho podido borrar");
+            CargarDatos();
+        }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Employee emp = new Employee
+            {
+                FirstName = txtName.Text,
+                LastName = txtLastName.Text,
+                BirthDate = dtpBirthDate.Value
+            };
+            if (controladorEmp.Insert(emp))
+                MessageBox.Show("Inserción correcta");
+            else
+                MessageBox.Show("No se ho podido insertar");
+
+            CargarDatos();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            CargarDatos();
+        }
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtID.Text))
+            {
+                MessageBox.Show("ID no válido");
+                return;
+            }
+
+            Employee emp = new Employee
+            {
+                EmployeeID = int.Parse(txtID.Text),
+                FirstName = txtName.Text,
+                LastName = txtLastName.Text,
+                BirthDate = dtpBirthDate.Value
+            };
+            if (controladorEmp.Insert(emp))
+                MessageBox.Show("Modificación correcta");
+            else
+                MessageBox.Show("No se ho podido modificar");
+
+            CargarDatos();
         }
     }
 }
