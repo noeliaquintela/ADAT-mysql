@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-4Oper-Forms-Parametros",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-CRUD-MVC-base", "05-CRUD-MVC-base\05-CRUD-MVC-base.csproj", "{CEEA6F15-6134-4D5A-9CB2-4BE44EB12306}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-CRUD-dgv-lineas", "06-CRUD-dgv-lineas\06-CRUD-dgv-lineas.csproj", "{6DC6B145-2997-4024-B9FB-F36FF75365F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{CEEA6F15-6134-4D5A-9CB2-4BE44EB12306}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEEA6F15-6134-4D5A-9CB2-4BE44EB12306}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEEA6F15-6134-4D5A-9CB2-4BE44EB12306}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DC6B145-2997-4024-B9FB-F36FF75365F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DC6B145-2997-4024-B9FB-F36FF75365F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DC6B145-2997-4024-B9FB-F36FF75365F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DC6B145-2997-4024-B9FB-F36FF75365F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

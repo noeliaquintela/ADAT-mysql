@@ -1,0 +1,4 @@
+﻿1. Crear carpetas (modelo-vista-controlador) Puedo copiar y pegar del proyecto anterior
+2. Me que con el código fuente de controllers y mdodels (cambiando los workspaces)
+3. Crear un formulario en la carpeta Views (FormEmployees)
+4.  Enlazar el comienzo del proyecto a este formulario
